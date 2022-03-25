@@ -22,7 +22,7 @@ export const FoodCard = (foodObj) => {
                       ? `<img src ="./assets/images/icon-veg.png" alt="IsVegetarian">`
                       : ""
                   }</p>
-                 <button type="button" class="btn btn-primary">Add to Order</button>
+                 <button type="button" class="btn btn-primary" id="order--btn">Add to Order</button>
             </div>
         </div>
     </div>
