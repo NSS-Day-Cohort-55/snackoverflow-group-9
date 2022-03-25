@@ -6,8 +6,7 @@
 
 
 export const FoodCard = (foodObj) => {
-
-    let foodHTML =  `
+    return `
     <div class="col-sm-6 g-4">
         <div class="card">
         <div class="h-100">
