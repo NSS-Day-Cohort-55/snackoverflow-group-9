@@ -31,6 +31,18 @@ export const loginUser = (userObj) => {
     })
   }
 
+  export const registerUser = (userObj) => {
+    const fetchOptions = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(userObj)
+    };
+  
+    return fetch(`http://localhost:8088/users`, fetchOptions);
+  };
+
 export const setLoggedInUserSessionStorage = (userObj) => {
   sessionStorage.setItem("SOuser", JSON.stringify(userObj))
   loggedInUser = userObj;

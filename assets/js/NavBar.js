@@ -61,9 +61,9 @@ export const NavBar = () => {
                         <p class="nav-link" aria-current="page" id="menu">Menu</p>
                     </li>
                     <!-- Only show my order once you login -->
-                    <!-- <li class="nav-item">
+                     <li class="nav-item">
                         <p class="nav-link" id="myOrders">My Orders</p>
-                    </li> -->
+                    </li> 
                     <li class="nav-item">
                     ${showLogin()}
                     </li>
