@@ -1,5 +1,4 @@
 export const FoodCard = (foodObj) => {
-
     return `
     <div class="col-sm-6 g-4">
         <div class="card">

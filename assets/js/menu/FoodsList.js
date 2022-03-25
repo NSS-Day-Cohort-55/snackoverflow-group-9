@@ -5,13 +5,20 @@ import { FoodCard } from './FoodCard.js'
 
 export const FoodList = () => {
     const contentTarget = document.querySelector("main")
-    let HTMLString;
-    MenuManger.getFoods()
-    .then(foodArray => {
-        HTMLString = `<div class="row">`
-        HTMLString += foodArray.map(food => FoodCard(food)).join('')
-        HTMLString += `</div>`
+    let HTMLString = `<div class='row' id='menu-category'>`
+        MenuManger.getMenus()
+        .then(menus => {
+            menus.forEach(menu => {
+                document.getElementById("menu-category").innerHTML += `<h2>${menu.name}</h2><div class='row' id='food-list-${menu.id}'></div>`
+                MenuManger.getFoodsByMenu(menu.id).then(foodArray => {
+                    document.getElementById(`food-list-${menu.id}`).innerHTML += foodArray.map(food => FoodCard(food)).join('')
+                });
+            });
+        })
+
+    HTMLString += `</div>`
+
+    if(HTMLString){
         contentTarget.innerHTML = HTMLString;
-    })
-    
+    }
 }
