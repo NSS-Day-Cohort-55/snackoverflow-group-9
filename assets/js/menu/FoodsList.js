@@ -1,6 +1,7 @@
 import * as MenuManger from './MenuManger.js';
 import { FoodCard } from './FoodCard.js'
 
+const cardElement = document.querySelector(".card-body");
 
 
 export const FoodList = () => {

@@ -26,21 +26,22 @@ const headerElement = document.querySelector("header");
     })
 
 
-cardElement.addEventListener("click", event => {
+// cardElement.addEventListener("click", event => {
     
-    const orderObject = {
-        userId: UserManager.getLoggedInUser.id,
-        food: ""
-        notes: '',
-        timestamp: Math.round(new Date().getTime()/1000),
-        isPickedUp: false
-    }
-    if (event.target.id === "order--btn"){
-        // createOrder(orderObject)
-        // console.log(orderObject)        
-        console.log(event.target)
-    }
-} )
+//     const orderObject = {
+//         userId: UserManager.getLoggedInUser.id,
+//         food: "",
+//         notes: '',
+//         timestamp: Math.round(new Date().getTime()/1000),
+//         isPickedUp: false
+//     }
+//     if (event.target.id === "order--btn"){
+//         // createOrder(orderObject)
+//         // console.log(orderObject)        
+//         console.log(event.target)
+//     }
+
+// } )
 ///////////// end event listeners /////////////////////
 
 
