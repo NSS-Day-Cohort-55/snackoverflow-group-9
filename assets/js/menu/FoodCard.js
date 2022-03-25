@@ -1,6 +1,13 @@
+// const veggieImage = () => {
+//     document.querySelector(".card-text").innerHTML += `<img src="/assets/images/icon-veg.png">`
+// }
+
+
+
+
 export const FoodCard = (foodObj) => {
 
-    return `
+    let foodHTML =  `
     <div class="col-sm-6 g-4">
         <div class="card">
         <div class="h-100">
@@ -8,12 +15,18 @@ export const FoodCard = (foodObj) => {
         </div>
             <div class="card-body">
                 <h5 class="card-title">${foodObj.name}</h5>
-                <p class="card-text">${foodObj.description}</p>
-                <p>Price: $${foodObj.price}</p>
+                <p class="card-text">${foodObj.description}</p>`
+                // if (foodObj.isVegetarian === true){
+                //     veggieImage()
+                // }
+                foodHTML += `<p>Price: $${foodObj.price}</p>
                 <!-- <button type="button" class="btn btn-primary">Example Bootstrap Button</button> -->
             </div>
         </div>
     </div>
     `
+
+    return foodHTML
 }
+
 
