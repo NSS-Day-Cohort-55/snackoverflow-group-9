@@ -7,11 +7,13 @@ import { NavBar } from "./NavBar.js";
 import * as UserManager from './auth/UserManager.js'; 
 import { CheckForUser } from "./auth/CheckForUser.js";
 import { Footer } from "./Footer.js";
+import { createOrder } from "./orders/OrderManager.js";
 
 ////////////// app declarations ///////////////////////
 // const headerElement = document.querySelector("header");
 const contentElement = document.querySelector("main");
-
+const cardElement = document.querySelector(".card-body");
+const buttonElement = document.querySelector("#order--btn")
 ////////////// event listeners ////////////////////////
 
 const headerElement = document.querySelector("header");
@@ -25,23 +27,38 @@ const headerElement = document.querySelector("header");
     })
 
 
+// buttonElement.addEventListener("click", event => {
+//     console.log(event)
+//     const orderObject = {
+//         userId: UserManager.getLoggedInUser.id,
+//         food: "",
+//         notes: '',
+//         timestamp: Math.round(new Date().getTime()/1000),
+//         isPickedUp: false
+//     }
+//     if (event.target.id === "order--btn"){
+//         // createOrder(orderObject)
+//         // console.log(orderObject)        
+//         console.log(event.currentTarget)
+//     }
 
+// } )
 ///////////// end event listeners /////////////////////
 
 
-// const checkForUser = () => {
-//     if (sessionStorage.getItem("SOUser")){
-//       UserManager.setLoggedInUser(JSON.parse(sessionStorage.getItem("SOUser")));
-//     }
-//     //   startSO();
-//     // }else {
-//     //   //show login/register
-//     //   console.log("no user showLogin")
-//     // }
+const checkForUser = () => {
+    if (sessionStorage.getItem("SOUser")){
+      UserManager.setLoggedInUser(JSON.parse(sessionStorage.getItem("SOUser")));
+    
+      startSO();
+    }else {
+      //show login/register
+      console.log("no user showLogin")
+    }
 
-//     NavBar();
-//     contentElement.innerHTML = FoodList();
-//   }
+    NavBar();
+    contentElement.innerHTML = FoodList();
+  }
 
     const showLoginRegister = () => {
         showNavBar();
