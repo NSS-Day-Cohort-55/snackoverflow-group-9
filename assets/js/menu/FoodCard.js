@@ -26,8 +26,6 @@ export const FoodCard = (foodObj) => {
         </div>
     </div>
     `
-
-    return foodHTML
 }
 
 
