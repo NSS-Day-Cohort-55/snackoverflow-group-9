@@ -5,3 +5,19 @@ export const getFoods = () => {
     .then(response => response.json())
 }
 
+export const getMenus = () => {
+    return fetch(`${apiURL}/menus`)
+    .then(response => response.json())
+    .then(menus => {
+        return menus
+    })
+}
+
+export const getFoodsByMenu = (menuId) => {
+    return fetch(`${apiURL}/foods?menuId=${menuId}&_sort=price`)
+    .then(response => response.json())
+    .then(foods => {
+        return foods
+    })
+}
+
