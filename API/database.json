@@ -156,6 +156,12 @@
       "name": "Bryan",
       "email": "bryan@so.com",
       "isAdmin": true
+    },
+    {
+      "name": "Sara Hackle",
+      "email": "sara@nss.com",
+      "isAdmin": false,
+      "id": 2
     }
   ]
 }
