@@ -1,10 +1,3 @@
-// const veggieImage = () => {
-//     document.querySelector(".card-text").innerHTML += `<img src="/assets/images/icon-veg.png">`
-// }
-
-
-
-
 export const FoodCard = (foodObj) => {
     return `
     <div class="col-sm-6 g-4">
@@ -21,7 +14,7 @@ export const FoodCard = (foodObj) => {
                       ? `<img src ="./assets/images/icon-veg.png" alt="IsVegetarian">`
                       : ""
                   }</p>
-                 <button type="button" class="btn btn-primary" id="order--btn">Add to Order</button>
+                 <button type="button" class="btn btn-primary" id="order--${foodObj.id}">Add to Order</button>
             </div>
         </div>
     </div>

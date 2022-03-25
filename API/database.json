@@ -1,16 +1,12 @@
 {
   "orders": [
     {
+      "food": "Sass Tea",
       "notes": "",
-      "timestamp": 1648234808,
+      "price": 3,
+      "timestamp": 1648244387,
       "isPickedUp": false,
       "id": 1
-    },
-    {
-      "notes": "",
-      "timestamp": 1648234960,
-      "isPickedUp": false,
-      "id": 2
     }
   ],
   "foods": [
