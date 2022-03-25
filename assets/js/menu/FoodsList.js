@@ -1,6 +1,8 @@
 import * as MenuManger from './MenuManger.js';
 import { FoodCard } from './FoodCard.js'
 
+
+
 export const FoodList = () => {
     const contentTarget = document.querySelector("main")
     let HTMLString;
