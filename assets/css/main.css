@@ -1,0 +1,22 @@
+nav img {
+    padding: 0 .5em;
+    width: 300px;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 40vh;
+    object-fit: cover;
+}
+
+.nav-item p {
+    cursor: pointer;
+}
+
+.navbar-text {
+    padding-top: 2rem;
+}
+
+.navbar-nav {
+    padding-top: 2rem;
+}

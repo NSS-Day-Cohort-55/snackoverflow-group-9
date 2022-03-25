@@ -1,0 +1,35 @@
+// Place variable overrides first,
+// then import just the bootstrap styles
+
+
+// Toggle global options
+$enable-gradients: true;
+$enable-shadows: true;
+
+// Customize some defaults
+$body-color: #333;
+$body-bg: #fff;
+$border-radius: .4rem;
+$success: #7952b3;
+$primary: #D66918;
+
+
+@import "bootstrap/scss/bootstrap";
+
+//
+// Custom styles
+//
+
+@import "icon-list";
+
+
+// Style Bootstrap icons
+.bi {
+  fill: currentColor;
+}
+
+.btn-primary {
+  color: $white;
+}
+
+

@@ -1,0 +1,147 @@
+{
+    "foods": [
+        {
+            "id": 1,
+            "menuId": 4,
+            "name": "Powered DOM-Nuts",
+            "price": 9,
+            "isVegetarian": true,
+            "description": "Soft golden rings of cake covered with powdered sugar. These scrumptious DOMS are a perfect ending to any meal or as a snack on the go!",
+            "imageURL": "poweredDomnuts.jpg"
+        },
+        {
+            "id": 2,
+            "menuId": 3,
+            "name": "Sour Cream and Microchips",
+            "price": 8,
+            "isVegetarian": true,
+            "description": "Fresh herbs and spices mixed with the creamiest sour cream. Served with hearty potatoes freshly sliced when you order.",
+            "imageURL": "sourcreamMicrochips.jpg"
+        },
+        {
+            "id": 3,
+            "menuId": 1,
+            "name": "Sea Shark",
+            "price": 18,
+            "isVegetarian": false,
+            "description": "Baked shark steak perfectly balanced with an herb-butter sauce and slightly sweet.",
+            "imageURL": "seashark.jpg"
+        },
+        {
+            "id": 4,
+            "menuId": 1,
+            "name": "Java Shrimp",
+            "price": 13,
+            "isVegetarian": false,
+            "description": "You don’t always have to drink your coffee, you can eat it too! Jumbo shrimp marinated in espresso roasted over an open flame producing a nice smokey flavor.",
+            "imageURL": "javashrimp.jpg"
+        },
+        {
+            "id": 5,
+            "menuId": 2,
+            "name": "Root Water",
+            "price": 2,
+            "isVegetarian": true,
+            "description": "Quench your thirst! Carrots and Beets blended in harmony producing a satisfying juice. Order by the gallon or in store free refills.",
+            "imageURL": "rootwater.webp"
+        },
+        {
+            "id": 7,
+            "menuId": 3,
+            "name": "Mozzarella Mega Bites",
+            "price": 6,
+            "isVegetarian": true,
+            "description": "Our signature fried mozzarella sticks, served with marinara sauce & roasted garlic aioli.",
+            "imageURL": "megabites.jpg"
+        },
+        {
+            "id": 8,
+            "menuId": 1,
+            "name": "Arrays and Beans",
+            "price": 9,
+            "isVegetarian": true,
+            "description": "For every bean, there is either a bean plus one or one bean less. Served in a cornbread bowl with a zesty sauce.",
+            "imageURL": "arraybeans.jpg"
+        },
+        {
+            "id": 9,
+            "menuId": 1,
+            "name": "WiFi Rice",
+            "price": 10,
+            "isVegetarian": false,
+            "description": "A vegetable-studded bowl you won't want to put down! Make it a hearty entree with your choice of chicken, beef, shrimp, or not.",
+            "imageURL": "wifirice.jpg"
+        },
+        {
+            "id": 10,
+            "menuId": 1,
+            "name": "SQ-L-T Sandwich",
+            "price": 6,
+            "isVegetarian": true,
+            "description": "A toasties-hero with thinly sliced squash, lightly oiled and grilled dressed with limes and vine ripened tomatoes",
+            "imageURL": "sqlt.jpg"
+        },
+        {
+            "id": 12,
+            "menuId": 4,
+            "name": "Slice of Pie Thon",
+            "price": 5,
+            "isVegetarian": false,
+            "description": "Our thon takes pecans to the next level. The bottom crust is topped with a delicious pecan custard, another crust and more pecans. You won't want to share this with anyone!",
+            "imageURL": "piethon.jpg"
+        },
+        {
+            "id": 13,
+            "menuId": 2,
+            "name": "Sass Tea",
+            "price": 3,
+            "isVegetarian": true,
+            "description": "An incredibly unique looking beverage, Sass tea is a blend of tea with milk, fruit and fruit juices, and yummy tapioca pearls.",
+            "imageURL": "sasstea.jpg"
+        },
+        {
+            "id": 14,
+            "menuId": 2,
+            "name": "!Async Coffee",
+            "price": 4,
+            "isVegetarian": true,
+            "description": "A rich blend of dark roasted coffe. Our secret is to simultaneously mix the coffee half and half with hot milk. Pairs perfectly with Powered DOM-Nuts",
+            "imageURL": "coffee.webp"
+        },
+        {
+            "id": 15,
+            "menuId": 2,
+            "name": "Git'n Grits",
+            "price": 12,
+            "isVegetarian": false,
+            "description": "Fried git'n breasts prepared the 'Hot Nashville' way with goat cheese grits. Served with maple hot sauce and pickled chiles.",
+            "imageURL": "gitngrits.webp"
+        }
+    ],
+    "menus": [
+        {
+            "id": 1,
+            "name": "Lunch"
+        },
+        {
+            "id": 2,
+            "name": "Drinks"
+        },
+        {
+            "id": 3,
+            "name": "Appetizers"
+        },
+        {
+            "id": 4,
+            "name": "Desserts"
+        }
+    ],
+    "users": [
+        {
+            "id": 1,
+            "name": "Bryan",
+            "email": "bryan@so.com",
+            "isAdmin": true
+        }
+    ]
+}
