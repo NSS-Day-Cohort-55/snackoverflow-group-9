@@ -5,9 +5,11 @@ import "../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js";
 import { FoodList } from './menu/FoodsList.js'
 import { NavBar } from "./NavBar.js";
 import * as UserManager from './auth/UserManager.js'; 
+import * as MenuManger from './menu/MenuManger.js'
 import { CheckForUser } from "./auth/CheckForUser.js";
 import { Footer } from "./Footer.js";
 import { createOrder } from "./orders/OrderManager.js";
+import { getFoodsByMenu } from "./menu/MenuManger.js";
 
 ////////////// app declarations ///////////////////////
 // const headerElement = document.querySelector("header");
@@ -27,24 +29,51 @@ const headerElement = document.querySelector("header");
     })
 
 
-// buttonElement.addEventListener("click", event => {
-//     console.log(event)
-//     const orderObject = {
-//         userId: UserManager.getLoggedInUser.id,
-//         food: "",
-//         notes: '',
-//         timestamp: Math.round(new Date().getTime()/1000),
-//         isPickedUp: false
-//     }
-//     if (event.target.id === "order--btn"){
-//         // createOrder(orderObject)
-//         // console.log(orderObject)        
-//         console.log(event.currentTarget)
-//     }
+    const promiseFoods = new Promise((resolve, reject) => {
+        resolve(MenuManger.getFoods().then(foods => {
+            return foods
+        })
+    )})
 
-// } )
-///////////// end event listeners /////////////////////
+    const promiseMenus = new Promise((resolve, reject) => {
+        resolve(MenuManger.getMenus().then(menus => {
+            return menus
+        })
+    )})
+    const promiseFoodsMenus = new Promise((resolve, reject) => {
+        resolve(MenuManger.getFoodsByMenu().then(foodsByMenu => {
+            return foodsByMenu
+        })
+    )})
 
+    Promise.all([promiseFoods, promiseMenus, promiseFoodsMenus]).then(results => {
+        promiseFoods.then(foods => {
+            promiseMenus.then(menus => {
+                promiseFoodsMenus.then(foodsByMenu => {
+                    console.log("inside promise all");
+                    contentElement.addEventListener("click", event => {
+                        
+                        for (const food of foods) {
+                            
+                            if (event.target.id.startsWith("order") &&
+                                parseInt(event.target.id.split("--")[1]) == parseInt(food.id) ) { 
+                
+                                    const orderObject = {
+                                        userId: UserManager.getLoggedInUser.id,
+                                        food: food.name,
+                                        notes: "",
+                                        price: food.price,
+                                        timestamp: Math.round(new Date().getTime()/1000),
+                                        isPickedUp: false
+                                    }  
+                                    createOrder(orderObject)         
+                            }                           
+                        }                        
+                    })
+                });
+            })
+        })
+    });
 
 const checkForUser = () => {
     if (sessionStorage.getItem("SOUser")){
