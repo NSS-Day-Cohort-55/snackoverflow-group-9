@@ -15,12 +15,9 @@ export const FoodCard = (foodObj) => {
         </div>
             <div class="card-body">
                 <h5 class="card-title">${foodObj.name}</h5>
-                <p class="card-text">${foodObj.description}</p>`
-                // if (foodObj.isVegetarian === true){
-                //     veggieImage()
-                // }
-                foodHTML += `<p>Price: $${foodObj.price}</p>
-                <!-- <button type="button" class="btn btn-primary">Example Bootstrap Button</button> -->
+                <p class="card-text">${foodObj.description}</p>
+                <p>Price: $${foodObj.price}</p>
+                <button type="button" class="btn btn-primary" id="order--btn">Add To Order</button>
             </div>
         </div>
     </div>
@@ -28,5 +25,7 @@ export const FoodCard = (foodObj) => {
 
     return foodHTML
 }
+
+
 
 

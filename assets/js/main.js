@@ -25,7 +25,14 @@ const headerElement = document.querySelector("header");
     })
 
 
+contentElement.addEventListener("click", event => {
+    let orderCounter = 0
+    if (event.target.id === "order--btn"){
+        orderCounter++
+        console.log(orderCounter)
 
+    }
+} )
 ///////////// end event listeners /////////////////////
 
 
