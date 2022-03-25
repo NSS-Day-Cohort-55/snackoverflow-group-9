@@ -110,7 +110,7 @@
         },
         {
             "id": 15,
-            "menuId": 2,
+            "menuId": 1,
             "name": "Git'n Grits",
             "price": 12,
             "isVegetarian": false,
